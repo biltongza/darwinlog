@@ -1,11 +1,12 @@
 # DarwinLog
+Macintosh native `os_log` logger provider implementation for Microsoft.Extensions.Logging 
 
-Macintosh logging provider backed by `os_log` (see [Apple documentation](https://developer.apple.com/documentation/os/os_log)).
+For more details on `os_log` see [Apple documentation](https://developer.apple.com/documentation/os/os_log).
 
 ## Usage
 
 ```
-using DarwinLog;
+using Microsoft.Logging.Extensions;
 
 Host.CreateDefaultBuilder(args)
     .ConfigureLogging(logging =>
