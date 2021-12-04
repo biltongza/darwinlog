@@ -4,10 +4,24 @@
     <TargetFramework>net6.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <RootNamespace>DarwinLog</RootNamespace>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageId>DarwinLog</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>Logan Dam</Authors>
+    <Description>Macintosh os_log logger provider implementation for Microsoft.Extenions.Logging.</Description>
+    <PackageTags>Microsoft.Extensions.Logging,mac,macintosh,logging,logger</PackageTags>
+    <RepositoryType>git</RepositoryType>
+    <RepositoryUrl>https://github.com/biltongza/darwinlog</RepositoryUrl>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="6.0.*" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Configuration" Version="6.0.*" />
   </ItemGroup>
 
   <ItemGroup>

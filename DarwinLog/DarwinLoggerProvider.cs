@@ -1,11 +1,11 @@
 ﻿using System.Collections.Concurrent;
 
-public class DarwinLoggingProvider : ILoggerProvider
+public class DarwinLoggerProvider : ILoggerProvider
 {
     private readonly IDisposable changeToken;
     private DarwinLoggingOptions options;
     private readonly ConcurrentDictionary<string, DarwinLogger> loggers = new ConcurrentDictionary<string, DarwinLogger>();
-    public DarwinLoggingProvider(IOptionsMonitor<DarwinLoggingOptions> config)
+    public DarwinLoggerProvider(IOptionsMonitor<DarwinLoggingOptions> config)
     {
         this.options = config.CurrentValue;
         changeToken = config.OnChange(updatedConfig => 

@@ -7,9 +7,9 @@ public record DarwinLoggingOptions
     public IDictionary<LogLevel, DarwinLogLevel> LogLevelMap { get; set; } = new Dictionary<LogLevel, DarwinLogLevel>
     {
         { LogLevel.Debug, DarwinLogLevel.Debug },
+        { LogLevel.Trace, DarwinLogLevel.Debug },
         { LogLevel.Information, DarwinLogLevel.Info },
         { LogLevel.Warning, DarwinLogLevel.Error },
-        { LogLevel.Trace, DarwinLogLevel.Debug },
         { LogLevel.Error, DarwinLogLevel.Error },
         { LogLevel.Critical, DarwinLogLevel.Fault },
     };
