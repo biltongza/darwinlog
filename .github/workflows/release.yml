@@ -29,7 +29,7 @@ jobs:
       uses: actions/upload-artifact@v2
       with:
         name: nuget
-        path: DarwinLog/bin/*.nupkg
+        path: DarwinLog/bin/**/*.nupkg
     - name: Publish Nuget
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
