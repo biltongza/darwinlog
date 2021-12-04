@@ -28,7 +28,7 @@
     <Content Include="../native/build/Release/libdarwinlog.dylib" Link="runtimes/osx-arm64/native/libdarwinlog.dylib">
       <PackagePath>runtimes/osx-arm64/native</PackagePath>
     </Content>
-    <None Include="README.me" Pack="true" PackagePath="\"/>
+    <None Include="README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
 </Project>
