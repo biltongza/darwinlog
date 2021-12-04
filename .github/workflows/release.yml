@@ -4,7 +4,7 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  buildAndRelease:
 
     runs-on: macos-latest
 
@@ -17,18 +17,23 @@ jobs:
     - name: build native lib
       uses: devbotsxyz/xcode-build@v1.0.0
       with:
-        workspace: native
-        project: darwinlog
-        configuration: release
+        project: native/darwinlog.xcodeproj
+        configuration: Release
     - name: Restore dependencies
       run: dotnet restore DarwinLog/DarwinLog.csproj
     - name: Build
-      run: dotnet build DarwinLog/DarwinLog.csproj --no-restore
+      run: dotnet build DarwinLog/DarwinLog.csproj -c Release --no-restore
     - name: Pack
       run: dotnet pack DarwinLog/DarwinLog.csproj --no-build
+    - name: upload artifact
+      uses: actions/upload-artifact@v2
+      with:
+        name: nuget
+        path: DarwinLog/bin/*.nupkg
     - name: Publish Nuget
       uses: brandedoutcast/publish-nuget@v2.5.5
       with:
         PROJECT_FILE_PATH: DarwinLog/DarwinLog.csproj
         NUGET_KEY: ${{ secrets.NUGETAPIKEY }}
+      
       
