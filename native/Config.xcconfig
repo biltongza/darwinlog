@@ -1,0 +1,18 @@
+//
+//  Config.xcconfig
+//  darwinlog
+//
+//  Created by Logan Dam on 2021/12/04.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://help.apple.com/xcode/#/dev745c5c974
+
+// Intermediate build files go here
+PROJECT_TEMP_DIR = $(SRCROOT)/build/$(PROJECT_NAME).build
+
+// Build-related files for the active build configuration go here
+CONFIGURATION_BUILD_DIR = $(SRCROOT)/build/$CONFIGURATION
+
+// The final product executables and other build products go here
+BUILT_PRODUCTS_DIR = $(SRCROOT)/build/$CONFIGURATION

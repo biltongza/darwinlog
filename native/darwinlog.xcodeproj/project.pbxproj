@@ -6,8 +6,14 @@
 	objectVersion = 55;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		02C1607D275BA68100CE8D87 /* darwinlog.c in Sources */ = {isa = PBXBuildFile; fileRef = 02C1607C275BA68100CE8D87 /* darwinlog.c */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		02AE7A89275BC87800C8A874 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		02C16075275BA67000CE8D87 /* libdarwinlog.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libdarwinlog.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		02C1607C275BA68100CE8D87 /* darwinlog.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = darwinlog.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -24,6 +30,8 @@
 		02C1606C275BA67000CE8D87 = {
 			isa = PBXGroup;
 			children = (
+				02AE7A89275BC87800C8A874 /* Config.xcconfig */,
+				02C1607C275BA68100CE8D87 /* darwinlog.c */,
 				02C16076275BA67000CE8D87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02C1607D275BA68100CE8D87 /* darwinlog.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +120,7 @@
 /* Begin XCBuildConfiguration section */
 		02C16077275BA67000CE8D87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02AE7A89275BC87800C8A874 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -170,6 +180,7 @@
 		};
 		02C16078275BA67000CE8D87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 02AE7A89275BC87800C8A874 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
