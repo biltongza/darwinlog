@@ -24,7 +24,7 @@ jobs:
     - name: Build
       run: dotnet build DarwinLog/DarwinLog.csproj -c Release --no-restore
     - name: Pack
-      run: dotnet pack DarwinLog/DarwinLog.csproj --no-build
+      run: dotnet pack DarwinLog/DarwinLog.csproj -c Release --no-build
     - name: upload artifact
       uses: actions/upload-artifact@v2
       with:
