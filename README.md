@@ -3,6 +3,9 @@ Macintosh native `os_log` logger provider implementation for Microsoft.Extension
 
 For more details on `os_log` see [Apple documentation](https://developer.apple.com/documentation/os/os_log).
 
+## OS Support
+I have only tested this on MacOS 12.0.1 on an M1 chip. YMMV.
+
 ## Usage
 
 ```
